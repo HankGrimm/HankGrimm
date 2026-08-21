@@ -1,6 +1,6 @@
 <div align="center">
 
-# Han Guangning (韩广宁)
+# Hank Grimm
 
 **Agent / AI Engineering · CS @ Guangzhou College of Commerce · Guangzhou**
 
