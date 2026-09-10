@@ -16,7 +16,7 @@ Building AI-native full-stack systems — from Multi-Agent workflows to security
 
 ### 💼 Experience
 
-**AI Full-Stack Intern · Baidu (China) Co., Ltd. Guangzhou Branch** `2026.07 – 2026.08`
+**AI Full-Stack Intern · Baidu (China) Co., Ltd. Guangzhou Branch** `2026.07 – 2026.09`
 
 Led the security-hardening rewrite of the `e.baidu` backend system.
 
