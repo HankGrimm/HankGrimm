@@ -14,6 +14,14 @@ Building AI-native full-stack systems — from Multi-Agent workflows to security
 
 ---
 
+### 🏆 Honors & Awards
+
+- **Champion, ConsensusHK** `2026`
+- **National Top 40, 2026 AI Pioneer Future Talent Competition (2026 AI 先锋未来人才大赛)** `2026`
+- **National First Prize, National College Students' "Innovation, Creativity & Entrepreneurship" E-Commerce Challenge (全国大学生电子商务"创新、创意及创业"挑战赛)** `2026`
+
+---
+
 ### 💼 Experience
 
 **AI Full-Stack Intern · Baidu (China) Co., Ltd. Guangzhou Branch** `2026.07 – 2026.09`
@@ -43,14 +51,19 @@ Built a shared smart-follow-cart platform end-to-end, from WeChat Mini Program t
 
 ### 🌱 Open Source Contributions
 
-Contributing to the **Vercel AI SDK** ecosystem (`vercel/ai`, `vercel/ai-elements`) — CSS layout fixes, TypeScript API design, and batch-processing algorithm design for the core `embedMany` function.
+Contributing across the AI/agent ecosystem — from the Vercel AI SDK's frontend components to Python event-bus internals and cross-platform CI correctness.
 
 | Repo | Type | Status |
 |---|---|---|
+| [line/line-bot-mcp-server #590](https://github.com/line/line-bot-mcp-server/pull/590) | Feat: add `get_group_summary` MCP tool | ✅ Merged |
 | [vercel/ai-elements #476](https://github.com/vercel/ai-elements/pull/476) | Fix: `overflow-hidden` → `overflow-x-clip` (sticky positioning) | In review |
 | [vercel/ai-elements #477](https://github.com/vercel/ai-elements/pull/477) | Fix: decouple `ImageProps` from deprecated SDK type | In review |
 | [vercel/ai-elements #478](https://github.com/vercel/ai-elements/pull/478) | Fix: Enter-key guard bypass during streaming | In review |
-| [vercel/ai #10082](https://github.com/vercel/ai/issues/10082) | Proposal: token-aware batching for `embedMany` | Awaiting maintainer feedback |
+| [vercel/ai #10082](https://github.com/vercel/ai/issues/10082) | Proposal: token-aware batching for `embedMany` | Closed |
+| [browser-use/bubus #35](https://github.com/browser-use/bubus/pull/35) | Feat: `EventBus.remove()` to unsubscribe handlers | In review |
+| [HKUDS/nanobot #5729](https://github.com/HKUDS/nanobot/pull/5729) | Fix: deterministic hash for WeCom/WeChat media fallback names | In review |
+| [NandhaKishorM/laya #216](https://github.com/NandhaKishorM/laya/pull/216) | Fix: cross-platform encoding/CRLF bug in CI benchmark audit | In review |
+| [gokite-ai/kite-x402-services #2](https://github.com/gokite-ai/kite-x402-services/pull/2) | Feat: add Frankfurter FX x402 service | In review |
 
 ---
 
