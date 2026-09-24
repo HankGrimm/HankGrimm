@@ -62,7 +62,7 @@ Contributing across the AI/agent ecosystem — from the Vercel AI SDK's frontend
 | [vercel/ai #10082](https://github.com/vercel/ai/issues/10082) | Proposal: token-aware batching for `embedMany` | Closed |
 | [browser-use/bubus #35](https://github.com/browser-use/bubus/pull/35) | Feat: `EventBus.remove()` to unsubscribe handlers | In review |
 | [HKUDS/nanobot #5729](https://github.com/HKUDS/nanobot/pull/5729) | Fix: deterministic hash for WeCom/WeChat media fallback names | In review |
-| [NandhaKishorM/laya #216](https://github.com/NandhaKishorM/laya/pull/216) | Fix: cross-platform encoding/CRLF bug in CI benchmark audit | In review |
+| [NandhaKishorM/laya #216](https://github.com/NandhaKishorM/laya/pull/216) | Fix: cross-platform encoding/CRLF bug in CI benchmark audit | ✅ Merged |
 | [gokite-ai/kite-x402-services #2](https://github.com/gokite-ai/kite-x402-services/pull/2) | Feat: add Frankfurter FX x402 service | In review |
 
 ---
