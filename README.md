@@ -2,9 +2,9 @@
 
 # Hank Grimm · 韩广宁
 
-**Agent / AI Engineering · CS @ Guangzhou College of Commerce · Guangzhou**
+**Agent / AI Engineering · CS (创新人才实验班) @ Guangzhou College of Commerce · 2023–2027**
 
-Building AI-native full-stack systems — from Multi-Agent workflows to security-hardened backend migrations.
+Building AI-native full-stack systems — from streaming runtimes & Agent event channels to security-hardened backend integrations.
 
 <img src="assets/logos/baidu.svg" alt="Baidu" width="115" /> &nbsp;&nbsp;&nbsp;
 <img src="assets/logos/anker.svg" alt="Anker Innovations" width="115" /> &nbsp;&nbsp;&nbsp;
@@ -25,34 +25,43 @@ Building AI-native full-stack systems — from Multi-Agent workflows to security
 - **Champion, ConsensusHK** `2026`
 - **National Top 40, 2026 AI Pioneer Future Talent Competition (2026 AI 先锋未来人才大赛)** `2026`
 - **National First Prize, National College Students' "Innovation, Creativity & Entrepreneurship" E-Commerce Challenge (全国大学生电子商务「创新、创意及创业」挑战赛)** `2026`
+- **Provincial First Prize, Guangdong "Maker Cube Robot" Competition (广东省创客魔方机器人比赛 · 高中组)** `高中`
 
 ---
 
 ### 💼 Experience
 
-**AI Full-Stack Intern · Baidu (China) Co., Ltd. Guangzhou Branch** `2026.07 – 2026.10`
+**AI Full-Stack Intern · Baidu (China) Co., Ltd. Guangzhou Branch** `2026.07 – Present`
 
-Security-hardening rewrite of the `e.baidu` backend, plus marketing landing pages and conversion data pipelines.
+GenFlow (pnpm monorepo multi-device AI framework) runtime + AICRM customer-data pipeline.
 
-- Designed and drove a strangler-fig migration from a PHP monolith to `NestJS 10 + TypeScript`, resolving multiple P0 auth-bypass and identity-spoofing issues along the way
-- Integrated SSO via a unified identity gateway with dual-guard JWT auth (401 unbound / 403 no-role), RBAC consolidation, and hashed sensitive-field indexing
-- Migrated **30 read-only API paths / 39 operations** with **85 Jest tests** passing; shipped a React 18 + Ant Design Pro admin frontend with an SSE-streamed agent chat preview (**13 Vitest tests** passing)
-- Shipped **40+** multi-channel landing pages; built a `create-lp-from-images` Skill that generates and publishes a landing page from design slices + a prompt
+**GenFlow — 多端 AI 应用框架（AI 对话 / PPT 生成 · 一次编写、四端交付）**
+
+- Unified streaming runtime: business calls `useSseStream(runtime).start({prompt})`; the platform package injects SSE (PC `EventSource` / NA JSBridge duplex / WAP weak-network fallback) and normalizes raw frames before handing off to message components
+- Agent-oriented event channel: `runtime.eventBus` decouples SSE producers from message/state/debug consumers; plugins register via `runtime.use(plugin)` on the Chat/PPT lifecycle
+- Cross-platform isolation: shared logic sinks to the common layer with per-platform providers absorbing device diffs; dual vue2/vue3 entries switch by preset; playground mocks the AI stream for 4-device side-by-side debugging
+
+**AICRM — 企微 × One CRM 客户主数据打通 · 加好友事件驱动链路**
+
+- `销服 BI → dbt 数仓 → FastAPI（/v1 / /skill / /internal）→ Web + AI 技能`; owned the customer master-data & event-integration backend
+- Deterministic matching (phone → company full/short name) under a "never mis-bind" policy; live `getWeChatRel` re-check before write (cache never used as write source); 3/hour + 30-min cooldown
+- Idempotent add-friend events (202 async) with `FOR UPDATE SKIP LOCKED` + 120s-lease workers; snapshot table + scheduled refresh cut `GET /customers` 32s → 0.1–0.3s
 
 **AI/LLM Engineering Intern · Guangzhou Xin'an Data Co., Ltd.** `2026.04 – 2026.07`
 
 Built Multi-Agent document review pipelines for enterprise brand & KPI compliance systems.
 
-- Orchestrated multi-node Agent workflows with `Dify`, converting manual report review into a fully automated pipeline across 7 intent-routed review dimensions
-- Optimized RAG retrieval (hierarchical Markdown chunking + Hybrid Search + Reranker on `Milvus`) — QA accuracy **60% → 88%**
-- Built a provider-agnostic LLM connection pool with exponential backoff, token-bucket rate limiting, and streaming support
+- Preprocessed stamped scans (OpenCV de-stamp/de-watermark + CLAHE) before `PaddleOCR`; fused title (0.6) + full-text (0.4) vectors; hierarchical Markdown chunking + Hybrid Search + Reranker on `Milvus` — QA accuracy **60% → 88%** on a 1,000-metric eval set
+- Built the "review → suggestion → revision" loop: Dify multi-node workflow, 7 intent-routed parallel retrieval, 5-element structured verdicts; similarity-aided report ingestion to avoid duplicate archives
+- Provider-agnostic async LLM connection pool (rate-limit, exponential backoff, retry, streaming); multi-arch ARM64 images via `docker buildx` across 13 services with `request_id + task_id` tracing
 
 **Founder / Full-Stack Developer · Guangzhou Kangxiaomiao Smart Technology Co., Ltd. (BoBaCarry)** `2025.09 – 2026.04`
 
 Built a shared smart-follow-cart platform end-to-end, from WeChat Mini Program to production deployment.
 
-- `Node.js + Express` backend with `MySQL + Redis` (**<50ms** response latency); `Vue 3 + Element Plus` ops console
-- Defined MQTT device protocol with hardware engineers; built a device simulator to unblock firmware integration before hardware arrived
+- `Node.js + Express` backend with `MySQL + Redis` (**<50ms** response latency); `Vue 3 + Element Plus` ops console; WeChat Mini Program (device binding / live status / history / login)
+- Defined MQTT device protocol + built a device simulator before hardware arrived; fixed a reconnect-without-resubscribe bug; virtual queue + structured concurrency for batch dispatch
+- Intent-routed customer-service loop (query / urge / repair) with tool calls; token-cost attribution via `LangSmith` trace normalization; Nginx + HTTPS + PM2 + COS with circuit-breaker & idempotency
 
 ---
 
